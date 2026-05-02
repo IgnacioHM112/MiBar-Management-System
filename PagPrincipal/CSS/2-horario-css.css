@@ -1,0 +1,23 @@
+#horarios-local{ /*todo*/
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 23vh;
+
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url(../Imagenes/fondo-horarios.svg);
+    background-size: cover;
+}
+
+#horarios-local #horario{
+    border-radius: 10px;
+    width: 600px;
+    height: 600px;
+}
+
+#horarios-local h1{
+    font-size: 3em;
+    padding-top: 250px;
+    color: rgb(66, 66, 66);
+}
+

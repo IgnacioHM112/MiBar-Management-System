@@ -1,0 +1,74 @@
+#ubicacion-local{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    padding-top: 20vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#ubicacion-local h1{
+    margin-top: 0;
+    font-size: 4em;
+    padding-top: auto;
+    padding-bottom: 150px;
+}
+
+.col-lg-3 h3{ /*TITULO GRILLA*/
+    position: static;
+    bottom: 100px;
+    padding-top: 10px;
+}
+
+.col-lg-3{ /*BORDE DE CADA GRILLA*/
+    padding: 15px;
+    background-color: #1d2124;
+    border-radius: 15px;
+}
+
+.picture1{
+    background-image: url(../Imagenes/picture1.jpg);
+    width: 100%;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    background-position-y: -70px;
+}
+
+.picture2{
+    background-image: url(../Imagenes/picture2.PNG);
+    width: 100%;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    background-position-y: -70px;
+}
+
+.picture3{
+    background-image: url(../Imagenes/picture3.jpg);
+    width: 100%;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    background-position-y: -70px;
+}
+
+.col-lg-3 .boton-mapa{
+    border-radius: 15px;
+}
+
+    .col-lg-3 .boton-mapa:hover{
+        background-color: #D7816F;
+    }
+
+.boton-mapa a{
+    text-decoration: none;
+    color: black;
+}
+
+    .boton-mapa a:hover{
+        color: black;
+    }
