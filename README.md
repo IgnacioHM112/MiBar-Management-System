@@ -5,14 +5,14 @@ Este es un sistema de gestión web completo para un bar/restaurante, desarrollad
 ## 🚀 Características
 - **Panel de Administración:** Gestión completa (CRUD) de productos (Agregar, Editar, Eliminar).
 - **Seguridad:** Implementación de Sentencias Preparadas (Prepared Statements) para prevenir Inyección SQL.
-- **Menú Dinámico:** Visualización de productos filtrados por horario (Mañana/Tarde) con sistema de búsqueda y paginación.
+- **Menú Dinámico:** Visualización de productos filtrados por horario (Mañana/Tarde) con sistema de búsqueda interactivo y paginación.
 - **Autenticación:** Sistema de Login para administradores y registro para usuarios.
-- **Diseño Responsivo:** Interfaz moderna adaptada a dispositivos móviles con Bootstrap 4.
+- **Diseño Responsivo & Moderno:** Interfaz pulida con animaciones de scroll (Reveal), tipografía moderna (Inter) y un tema visual cálido personalizado (`modern-style.css`).
 
 ## 🛠️ Tecnologías utilizadas
 - **Servidor:** XAMPP (Apache + MySQL/MariaDB)
 - **Backend:** PHP 8.x
-- **Frontend:** HTML5, CSS3, JavaScript, Bootstrap 4
+- **Frontend:** HTML5, CSS3 (Custom Modern Theme + Bootstrap 4), JavaScript
 - **Base de Datos:** MySQL
 - **Acceso Remoto:** Ngrok (Opcional)
 
@@ -40,13 +40,6 @@ Sigue estos pasos para configurar el proyecto en tu computadora local:
 - Haz clic en **Seleccionar archivo** y busca el archivo `restaurante.sql` que está dentro de la carpeta del proyecto.
 - Baja hasta el final y haz clic en **Importar**.
 
-### 4. Verificar Credenciales de Base de Datos
-- Abre el archivo `Admin/basedatos/conexion.php` y asegúrate de que los datos coincidan con tu servidor local (por defecto en XAMPP son):
-  - **Host:** `localhost`
-  - **Usuario:** `root`
-  - **Contraseña:** (Vacío)
-  - **DB:** `restaurante`
-
 ---
 
 ## 🚀 Cómo Ejecutar el Proyecto
@@ -56,7 +49,7 @@ Una vez que Apache y MySQL estén corriendo en XAMPP:
 - **Página Principal (Menú):** [http://localhost/MiBar/](http://localhost/MiBar/)
 - **Panel de Administración:** [http://localhost/MiBar/Login/loginvista.php](http://localhost/MiBar/Login/loginvista.php)
   - **Usuario:** `admin`
-  - **Contraseña:** `12345`
+  - **Contraseña:** `12345` (Consultar `Datos Admin.txt` para más detalles).
 
 ---
 
@@ -64,27 +57,30 @@ Una vez que Apache y MySQL estén corriendo en XAMPP:
 
 Si necesitas mostrar el proyecto a otra persona de forma remota sin subirlo a un hosting pago:
 
-1. **Descargar Ngrok:** Descárgalo desde [ngrok.com](https://ngrok.com/) y descomprímelo.
+1. **Instalación:**
+   - **Opción A (Recomendada):** Instalar vía NPM si tienes Node.js: `npm install -g ngrok`.
+   - **Opción B:** Descargarlo desde [ngrok.com](https://ngrok.com/) y descomprimirlo.
+
 2. **Autenticación:** Regístrate en su web y ejecuta el comando de tu token (solo la primera vez):
    ```bash
    ngrok config add-authtoken TU_TOKEN_AQUI
    ```
+
 3. **Iniciar Túnel:** Con XAMPP encendido, abre una terminal y ejecuta:
    ```bash
    ngrok http 80
    ```
-4. **Compartir URL:** Copia la URL que aparece en `Forwarding` (ej: `https://xxxx.ngrok-free.app`). 
-   - **IMPORTANTE:** Para entrar al proyecto, debes añadir `/MiBar/` al final de esa URL.
-   - Ejemplo: `https://xxxx.ngrok-free.app/MiBar/`
 
-> **Nota:** La terminal de Ngrok debe permanecer abierta mientras quieras que el link funcione. En la cuenta gratuita, la URL cambiará cada vez que reinicies Ngrok.
+4. **Compartir URL:** Copia la URL que aparece en `Forwarding` (ej: `https://xxxx.ngrok-free.app`). 
+   - **IMPORTANTE:** Debes añadir `/MiBar/` al final de esa URL.
+   - Ejemplo: `https://xxxx.ngrok-free.app/MiBar/`
 
 ### ⚠️ Solución de problemas comunes (Ngrok):
 
-*   **Pantalla de Advertencia (Visit Site):** Al abrir el link, verás una pantalla de seguridad de Ngrok. Simplemente haz clic en el botón azul **"Visit Site"** para entrar. Es una protección de Ngrok para cuentas gratuitas.
-*   **Error ERR_NGROK_3200 (Offline):** Significa que el túnel se cerró o internet se desconectó. Cierra la terminal de Ngrok, vuelve a ejecutar `ngrok http 80` y usa la **nueva URL** que te asigne.
-*   **Error 404 Not Found:** Asegúrate de que la URL termina en `/MiBar/`. Si solo entras a la URL de Ngrok a secas, Apache no sabrá qué carpeta mostrar.
-*   **Error 502 Bad Gateway:** Verifica que el módulo **Apache** en el XAMPP Control Panel esté en verde (Started).
+*   **Comando no reconocido:** Si `ngrok` no funciona, intenta usar la ruta completa (ej: `C:\Users\TU_USUARIO\AppData\Roaming\npm\ngrok http 80`) o reinicia la terminal.
+*   **Pantalla de Advertencia:** Haz clic en **"Visit Site"** para entrar.
+*   **Error 404 Not Found:** Asegúrate de que la URL termina en `/MiBar/`.
+*   **Error 502 Bad Gateway:** Verifica que **Apache** en XAMPP esté iniciado (Started).
 
 ---
 Desarrollado por Ignacio - 2026.
